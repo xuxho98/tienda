@@ -28,6 +28,8 @@ Route::post('/clear', 'CartController@clear')->name('cart.clear');
 
 Route::post('/compra', 'CartController@money')->name('cart.money');
 
+Route::get('/add/produc', 'ProductController@index')->name('producto');
+
 
 
 Auth::routes();

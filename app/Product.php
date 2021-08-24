@@ -10,6 +10,6 @@ class Product extends Model
 
     protected $fillable = [
         'name',	'slug',	'details','price',
-        'shipping_cost','description','category_id','brand_id',	'image_path'
+        'shipping_cost','description','category_id','brand_id',	'image_path','stock','code'
     ];
 }

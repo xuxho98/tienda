@@ -16,6 +16,8 @@
                     @endif
                     <a href="{{route('shop')}}"><button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> <br> Shop</button></a>
 
+                    <a href="{{route('producto')}}"><button type="button" class="btn btn-secondary"><i class="fa fa-shopping-cart"></i> <br>Add Product</button></a>
+
                 </div>
             </div>
         </div>

@@ -5,13 +5,19 @@ namespace App\Http\Controllers;
 use App\Product;
 use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
 
     public function shop()
     {
-        $products = Product::all();
+        $products = DB::table('products')
+        ->select('*')
+        ->where('stock', '!=', '0' )
+        ->get();
+        // $products = Product::all();
+        // $libros = DB::select('select * from books where 1');
         // dd($products);
         return view('shop')->withTitle('E-COMMERCE STORE | SHOP')->with(['products'=> $products]);
     }

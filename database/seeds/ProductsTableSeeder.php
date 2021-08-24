@@ -22,7 +22,9 @@ class ProductsTableSeeder extends Seeder
             'description' => 'MackBook Pro',
             'category_id' => 1,
             'brand_id' => 1,
-            'image_path' => 'macbook-pro.png'
+            'image_path' => 'macbook-pro.png',
+            'stock' => 12,
+            'code' => 1234567890123
         ]);
 
         Product::create([
@@ -34,7 +36,9 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Dell Vostro 3557',
             'category_id' => 1,
             'brand_id' => 2,
-            'image_path' => 'dell-v3557.png'
+            'image_path' => 'dell-v3557.png',
+            'stock' => 12,
+            'code' => 1245167890123
         ]);
 
         Product::create([
@@ -46,7 +50,9 @@ class ProductsTableSeeder extends Seeder
             'description' => 'iPhone 11 Pro',
             'category_id' => 2,
             'brand_id' => 1,
-            'image_path' => 'iphone-11-pro.png'
+            'image_path' => 'iphone-11-pro.png',
+            'stock' => 12,
+            'code' => 1234577877123
         ]);
 
         Product::create([
@@ -58,7 +64,9 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Remax 610D Headset',
             'category_id' => 3,
             'brand_id' => 3,
-            'image_path' => 'remax-610d.jpg'
+            'image_path' => 'remax-610d.jpg',
+            'stock' => 12,
+            'code' => 1234523890123
         ]);
 
         Product::create([
@@ -70,7 +78,9 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Samsung LED TV',
             'category_id' => 4,
             'brand_id' => 4,
-            'image_path' => 'samsung-led-24.png'
+            'image_path' => 'samsung-led-24.png',
+            'stock' => 12,
+            'code' => 1234567770123
         ]);
 
         Product::create([
@@ -82,7 +92,9 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Samsung Digital Camera',
             'category_id' => 5,
             'brand_id' => 4,
-            'image_path' => 'samsung-mv800.jpg'
+            'image_path' => 'samsung-mv800.jpg',
+            'stock' => 12,
+            'code' => 1234548890123
         ]);
 
         Product::create([
@@ -94,7 +106,9 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Huawei GR 5 2017',
             'category_id' => 2,
             'brand_id' => 5,
-            'image_path' => 'gr5-2017.jpg'
+            'image_path' => 'gr5-2017.jpg',
+            'stock' => 12,
+            'code' => 5434567890123
         ]);
     }
 }
