@@ -12,13 +12,13 @@
                 <div class="center">
                     <div>
 
-                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                        <button type="button" class="btn btn-outline-primary"><i class="fa fa-plus"></i> <br> Create</button>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-sm">
-                        <table id="Table" class="table table-striped table-bordered" style="width:100%">
+                        <table id="Table" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%" >
                             <thead>
                                 <tr>
                                     <th width="100">Image</th>
@@ -34,7 +34,7 @@
                                 <tr>
                                     <td>
                                         <img src="{{ asset('images/'.$pro->image_path) }}"
-                                        class="card-img-top" width="100" height="100"
+                                        class="img-fluid"
                                         alt="{{ $pro->image_path }}">
                                     </td>
                                     <td>
@@ -50,9 +50,13 @@
                                         {{ $pro->stock }}
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                        <button type="button" class="btn btn-outline-warning">Warning</button>
-                                        <button type="button" class="btn btn-outline-info">Info</button
+                                        <button type="button" class="btn btn-outline-warning"><i class="fa fa-pencil-square-o"></i><br> Edit</button>
+                                        <button type="button" class="btn btn-outline-info"><i class="fa fa-info-circle"></i> <br> Detail</button
+                                        <form action="{{ route('cart.remove') }}" method="POST">
+                                            {{ csrf_field() }}
+                                            <input type="hidden" value="{{ $pro->id }}" id="id" name="id">
+                                            <button class="btn btn-outline-danger"><i class="fa fa-trash"></i><br> Remove</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
