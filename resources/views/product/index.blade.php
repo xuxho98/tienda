@@ -10,12 +10,9 @@
                     </div>
                 </div>
                 <div class="center">
-                    <div>
-
-                        <a type="button" href="{{route('product.create')}}" class="btn btn-outline-primary">
-                            <i class="fa fa-plus"></i> <br> Create
-                        </a>
-                    </div>
+                    <a type="button" href="{{route('product.create')}}" class="btn btn-outline-primary">
+                        <i class="fa fa-plus"></i> <br> Create
+                    </a>
                 </div>
                 <br>
                 <div class="row">
