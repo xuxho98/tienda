@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -30,7 +31,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('product.create');
     }
 
     /**
@@ -41,7 +42,22 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $Product = new Product();
+            $Product->nombre = $request->nombre;
+            // script para subir la imagen
+            if($request->hasFile("imagen")){
+
+                $imagen = $request->file("imagen");
+                $nombreimagen = Str::slug($request->nombre).".".$imagen->guessExtension();
+                $ruta = public_path("img/Product/");
+
+                //$imagen->move($ruta,$nombreimagen);
+                copy($imagen->getRealPath(),$ruta.$nombreimagen);
+
+                $Product->imagen = $nombreimagen;
+
+            }
+            $Product->save();
     }
 
     /**
@@ -86,6 +102,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return $id;
     }
 }

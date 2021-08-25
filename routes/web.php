@@ -28,7 +28,17 @@ Route::post('/clear', 'CartController@clear')->name('cart.clear');
 
 Route::post('/compra', 'CartController@money')->name('cart.money');
 
-Route::get('/add/produc', 'ProductController@index')->name('producto');
+Route::get('/produc', 'ProductController@index')->name('producto');
+Route::DELETE('/produc/{id}/', 'ProductController@destroy')->name('product.remove');
+
+Route::get('/produc/create/', 'ProductController@create')->name('product.create');
+
+Route::get('/show/{id}/', 'ProductController@show')->name('product.info');
+Route::put('/update/{id} ', 'ProductController@update')->name('product.update');
+Route::get('/edit/{id}', 'ProductController@edit')->name('product.edit');
+
+
+
 
 
 

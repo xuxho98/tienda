@@ -12,7 +12,9 @@
                 <div class="center">
                     <div>
 
-                        <button type="button" class="btn btn-outline-primary"><i class="fa fa-plus"></i> <br> Create</button>
+                        <a type="button" href="{{route('product.create')}}" class="btn btn-outline-primary">
+                            <i class="fa fa-plus"></i> <br> Create
+                        </a>
                     </div>
                 </div>
                 <br>
@@ -50,13 +52,9 @@
                                         {{ $pro->stock }}
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-outline-warning"><i class="fa fa-pencil-square-o"></i><br> Edit</button>
-                                        <button type="button" class="btn btn-outline-info"><i class="fa fa-info-circle"></i> <br> Detail</button
-                                        <form action="{{ route('cart.remove') }}" method="POST">
-                                            {{ csrf_field() }}
-                                            <input type="hidden" value="{{ $pro->id }}" id="id" name="id">
-                                            <button class="btn btn-outline-danger"><i class="fa fa-trash"></i><br> Remove</button>
-                                        </form>
+                                        <a href="{{route('product.edit',$pro->id)}}" type="button" class="btn btn-outline-warning"><i class="fa fa-pencil-square-o"></i><br> Edit</a>
+                                        <a href="{{route('product.info',$pro->id)}}" type="button" class="btn btn-outline-info"><i class="fa fa-info-circle"></i> <br> Detail</a>
+
                                     </td>
                                 </tr>
                                 @endforeach
