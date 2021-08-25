@@ -30,6 +30,8 @@ Route::post('/compra', 'CartController@money')->name('cart.money');
 
 Route::get('/add/produc', 'ProductController@index')->name('producto');
 
+Route::DELETE('ProductController/remove/{id}', 'ProductController@destroy')->name('product.remove');
+
 
 
 Auth::routes();

@@ -86,6 +86,10 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $note = Product::find($id);
+
+        $note->delete();
+        return redirect('/');
+        // return $request;
     }
 }

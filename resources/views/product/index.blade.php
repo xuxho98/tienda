@@ -51,12 +51,14 @@
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-outline-warning"><i class="fa fa-pencil-square-o"></i><br> Edit</button>
-                                        <button type="button" class="btn btn-outline-info"><i class="fa fa-info-circle"></i> <br> Detail</button
-                                        <form action="{{ route('cart.remove') }}" method="POST">
-                                            {{ csrf_field() }}
-                                            <input type="hidden" value="{{ $pro->id }}" id="id" name="id">
-                                            <button class="btn btn-outline-danger"><i class="fa fa-trash"></i><br> Remove</button>
-                                        </form>
+                                        <button type="button" class="btn btn-outline-info"><i class="fa fa-info-circle"></i> <br> Detail</button>
+
+                                        <form method="POST" action="{{ route("product.remove",$pro->id) }}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button  type="submit" class="btn btn-outline-danger"><i class="fa fa-trash"></i><br> Remove</button>
+
+                                          </form>
                                     </td>
                                 </tr>
                                 @endforeach
