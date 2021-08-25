@@ -11,8 +11,7 @@
                 </div>
                 <div class="center">
                     <div>
-
-                        <button type="button" class="btn btn-outline-primary"><i class="fa fa-plus"></i> <br> Create</button>
+                        <a href="{{route('product.create')}}" type="button" class="btn btn-outline-primary"><i class="fa fa-plus"></i> <br> Create</a>
                     </div>
                 </div>
                 <br>
@@ -50,8 +49,8 @@
                                         {{ $pro->stock }}
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-outline-warning"><i class="fa fa-pencil-square-o"></i><br> Edit</button>
-                                        <button type="button" class="btn btn-outline-info"><i class="fa fa-info-circle"></i> <br> Detail</button>
+                                        <a href="{{route('product.edit', $pro->id)}}" type="button" class="btn btn-outline-warning"><i class="fa fa-pencil-square-o"></i><br> Edit</a>
+                                        <a href="{{route('product.show', $pro->id)}}" type="button" class="btn btn-outline-info"><i class="fa fa-info-circle"></i> <br> Detail</a>
 
                                         <form method="POST" action="{{ route("product.remove",$pro->id) }}">
                                             @csrf

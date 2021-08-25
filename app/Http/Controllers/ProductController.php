@@ -30,7 +30,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('product.create');
     }
 
     /**
@@ -89,7 +89,7 @@ class ProductController extends Controller
         $note = Product::find($id);
 
         $note->delete();
-        return redirect('/');
+        return redirect('/add/produc');
         // return $request;
     }
 }
