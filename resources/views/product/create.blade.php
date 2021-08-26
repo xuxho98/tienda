@@ -9,7 +9,6 @@
                             @include('product.plan.form')
                         </form>
                     </div>
-
                 </div>
             </div>
         </main>

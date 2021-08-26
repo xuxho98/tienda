@@ -29,13 +29,19 @@ Route::post('/clear', 'CartController@clear')->name('cart.clear');
 Route::post('/compra', 'CartController@money')->name('cart.money');
 
 Route::get('/produc', 'ProductController@index')->name('producto');
-Route::DELETE('/produc/{id}/', 'ProductController@destroy')->name('product.remove');
+
+Route::DELETE('/produc/remove/{id}/', 'ProductController@destroy')->name('product.remove');
 
 Route::get('/produc/create/', 'ProductController@create')->name('product.create');
 
-Route::get('/show/{id}/', 'ProductController@show')->name('product.info');
-Route::put('/update/{id} ', 'ProductController@update')->name('product.update');
-Route::get('/edit/{id}', 'ProductController@edit')->name('product.edit');
+Route::get('/produc/show/{id}/', 'ProductController@show')->name('product.info');
+Route::put('/produc/update/{id} ', 'ProductController@update')->name('product.update');
+Route::get('/produc/edit/{id}', 'ProductController@edit')->name('product.edit');
+
+Route::get('/produc/category/create/', 'ProductController@create')->name('product.category.create');
+
+
+
 
 
 
