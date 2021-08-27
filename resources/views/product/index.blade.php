@@ -10,9 +10,18 @@
                     </div>
                 </div>
                 <div class="center">
+<<<<<<< HEAD
                     <div>
                         <a href="{{route('product.create')}}" type="button" class="btn btn-outline-primary"><i class="fa fa-plus"></i> <br> Create</a>
                     </div>
+=======
+                    <a type="button" href="{{route('product.create')}}" class="btn btn-outline-primary">
+                        <i class="fa fa-plus"></i> <br> Product
+                    </a>
+                    <a type="button" href="{{route('product.category.create')}}" class="btn btn-outline-primary">
+                        <i class="fa fa-plus"></i> <br> Category
+                    </a>
+>>>>>>> main
                 </div>
                 <br>
                 <div class="row">
@@ -42,6 +51,7 @@
                                     <td>
                                         {{ $pro->name }}
                                     </td>
+
                                     <td>
                                         {{ $pro->price }}
                                     </td>
@@ -49,6 +59,7 @@
                                         {{ $pro->stock }}
                                     </td>
                                     <td>
+<<<<<<< HEAD
                                         <a href="{{route('product.edit', $pro->id)}}" type="button" class="btn btn-outline-warning"><i class="fa fa-pencil-square-o"></i><br> Edit</a>
                                         <a href="{{route('product.show', $pro->id)}}" type="button" class="btn btn-outline-info"><i class="fa fa-info-circle"></i> <br> Detail</a>
 
@@ -58,6 +69,17 @@
                                             <button  type="submit" class="btn btn-outline-danger"><i class="fa fa-trash"></i><br> Remove</button>
 
                                           </form>
+=======
+                                        <div class="btn-group btn-group-toggle">
+                                            <a href="{{route('product.edit',$pro->id)}}" type="button" class="btn btn-warning"><i class="fa fa-pencil-square-o"></i><br> Edit</a>
+                                            <a href="{{route('product.info',$pro->id)}}" type="button" class="btn btn-info btn"><i class="fa fa-info-circle"></i> <br> Detail</a>
+                                            <form action="{{ route('product.remove', $pro->id) }}" method="post">
+                                                @csrf
+                                                @method('delete')
+                                                    <button type="submit" name="submit" class="btn btn-danger"  onclick="return confirm('¿Estas seguro que quieres Eliminar el Registro?')"><i class="fa fa-trash"></i><br> Remove</button>
+                                            </form>
+                                        </div>
+>>>>>>> main
                                     </td>
                                 </tr>
                                 @endforeach

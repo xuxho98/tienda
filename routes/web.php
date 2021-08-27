@@ -30,12 +30,30 @@ Route::post('/compra', 'CartController@money')->name('cart.money');
 
 Route::get('/produc', 'ProductController@index')->name('producto');
 
+<<<<<<< HEAD
 Route::DELETE('Product/remove/{id}', 'ProductController@destroy')->name('product.remove');
 Route::get('/produc/create', 'ProductController@create')->name('product.create');
 Route::post('/produc/store/{id}', 'ProductController@store')->name('product.store');
 Route::get('/produc/edit/{id}', 'ProductController@edit')->name('product.edit');
 Route::post('/produc/update/{id}', 'ProductController@edit')->name('product.edit');
 Route::get('/produc/show/{id}', 'ProductController@show')->name('product.show');
+=======
+Route::DELETE('/produc/remove/{id}/', 'ProductController@destroy')->name('product.remove');
+
+Route::get('/produc/create/', 'ProductController@create')->name('product.create');
+
+Route::get('/produc/show/{id}/', 'ProductController@show')->name('product.info');
+Route::put('/produc/update/{id} ', 'ProductController@update')->name('product.update');
+Route::get('/produc/edit/{id}', 'ProductController@edit')->name('product.edit');
+
+Route::get('/produc/category/create/', 'ProductController@create')->name('product.category.create');
+
+
+
+
+
+
+>>>>>>> main
 
 
 
