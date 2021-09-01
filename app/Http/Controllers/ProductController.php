@@ -68,7 +68,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = DB::table('products')
+        ->where('id', $id)
+        ->first();
+        return view('product.show',compact('product'));
     }
 
     /**
@@ -79,7 +82,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = DB::table('products')
+        ->where('id', $id)
+        ->first();
+        return view('product.edit',compact('product'));
     }
 
     /**
@@ -102,6 +108,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        return $id;
+        $product = Product::find($id);
+        $product->delete();
+        return redirect('/produc');
+
     }
 }
