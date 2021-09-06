@@ -35,8 +35,20 @@
                                                         <input class="form-control"  readonly=»readonly»  type=»text» disabled=»disabled»  value="{{$product->stock}}">
                                                     </div>
                                                     <div class="col-12">
-                                                        <label>shipping cost</label>
+                                                        <label>purchase price</label>
                                                         <input class="form-control"  readonly=»readonly»  type=»text» disabled=»disabled»  value="{{$product->shipping_cost}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <label>category</label>
+                                                        <input class="form-control"  readonly=»readonly»  type=»text» disabled=»disabled»  value="{{$product->category_id}}">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label>code</label>
+                                                        <input class="form-control"  readonly=»readonly»  type=»text» disabled=»disabled»  value="{{$product->code}}">
                                                     </div>
                                                 </div>
                                             </div>
